@@ -1,7 +1,7 @@
 {
-    "name": "react-native-ble-advertiser",
+    "name": "react-native-ble-bpeople",
     "version": "0.0.17",
-    "description": "A react-native implementation for sending BLE advertisements",
+    "description": "A react-native implementation for sending BLE advertisements - bPeople version with iOS/Android fixes",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",

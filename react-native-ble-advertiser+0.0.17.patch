@@ -1,0 +1,561 @@
+diff --git a/node_modules/react-native-ble-advertiser/android/build.gradle b/node_modules/react-native-ble-advertiser/android/build.gradle
+index 2526548..b8785ba 100644
+--- a/node_modules/react-native-ble-advertiser/android/build.gradle
++++ b/node_modules/react-native-ble-advertiser/android/build.gradle
+@@ -1,12 +1,12 @@
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 28
+-    buildToolsVersion "28.0.3"
++    compileSdkVersion 35
++    buildToolsVersion "35.0.0"
+ 
+     defaultConfig {
+         minSdkVersion 21
+-        targetSdkVersion 28
++        targetSdkVersion 34
+         versionCode 1
+         versionName "1.0"
+     }
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/results.bin b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/results.bin
+new file mode 100644
+index 0000000..7ed749e
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/results.bin
+@@ -0,0 +1 @@
++o/bundleLibRuntimeToDirDebug
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$1.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$1.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleAdvertiseCallback.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleAdvertiseCallback.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleScanCallback.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleScanCallback.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserModule.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserPackage.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BLEAdvertiserPackage.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BuildConfig.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/bundleLibRuntimeToDirDebug_dex/com/vitorpamplona/bleavertiser/BuildConfig.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin b/node_modules/react-native-ble-advertiser/android/build/.transforms/5360a88e68e1988e7370e0f8773a6fc1/transformed/bundleLibRuntimeToDirDebug/desugar_graph.bin
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/bd162c3e5e920a11f8dd51ea9fb1ed27/results.bin b/node_modules/react-native-ble-advertiser/android/build/.transforms/bd162c3e5e920a11f8dd51ea9fb1ed27/results.bin
+new file mode 100644
+index 0000000..0d259dd
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/.transforms/bd162c3e5e920a11f8dd51ea9fb1ed27/results.bin
+@@ -0,0 +1 @@
++o/classes
+diff --git a/node_modules/react-native-ble-advertiser/android/build/.transforms/bd162c3e5e920a11f8dd51ea9fb1ed27/transformed/classes/classes_dex/classes.dex b/node_modules/react-native-ble-advertiser/android/build/.transforms/bd162c3e5e920a11f8dd51ea9fb1ed27/transformed/classes/classes_dex/classes.dex
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/generated/source/buildConfig/debug/com/vitorpamplona/bleavertiser/BuildConfig.java b/node_modules/react-native-ble-advertiser/android/build/generated/source/buildConfig/debug/com/vitorpamplona/bleavertiser/BuildConfig.java
+new file mode 100644
+index 0000000..d543bd2
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/generated/source/buildConfig/debug/com/vitorpamplona/bleavertiser/BuildConfig.java
+@@ -0,0 +1,10 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.vitorpamplona.bleavertiser;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "com.vitorpamplona.bleavertiser";
++  public static final String BUILD_TYPE = "debug";
++}
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml b/node_modules/react-native-ble-advertiser/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..7331231
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.vitorpamplona.bleavertiser" >
++
++    <uses-sdk android:minSdkVersion="21" />
++
++    <uses-permission android:name="android.permission.BLUETOOTH" />
++    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
++    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
++    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json b/node_modules/react-native-ble-advertiser/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+new file mode 100644
+index 0000000..818dfcb
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "com.vitorpamplona.bleavertiser",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties b/node_modules/react-native-ble-advertiser/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+new file mode 100644
+index 0000000..1211b1e
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/aar_metadata/debug/writeDebugAarMetadata/aar-metadata.properties
+@@ -0,0 +1,6 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
++minCompileSdkExtension=0
++minAndroidGradlePluginVersion=1.0.0
++coreLibraryDesugaringEnabled=false
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json b/node_modules/react-native-ble-advertiser/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar b/node_modules/react-native-ble-advertiser/android/build/intermediates/compile_library_classes_jar/debug/bundleLibCompileToJarDebug/classes.jar
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar b/node_modules/react-native-ble-advertiser/android/build/intermediates/compile_r_class_jar/debug/generateDebugRFile/R.jar
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt b/node_modules/react-native-ble-advertiser/android/build/intermediates/compile_symbol_list/debug/generateDebugRFile/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..dcffc16
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Wed Sep 17 20:24:20 BRT 2025
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..1d00e09
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..0ed2120
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/debug/jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..8c8d6ad
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/debug/shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/packageDebugAssets/merger.xml b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+new file mode 100644
+index 0000000..1d352f7
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/assets"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/debug/assets"/></dataSet><dataSet config="generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/build/intermediates/shader_assets/debug/compileDebugShaders/out"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$1.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$1.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleAdvertiseCallback.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleAdvertiseCallback.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleScanCallback.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleScanCallback.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserModule.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserPackage.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BLEAdvertiserPackage.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BuildConfig.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/vitorpamplona/bleavertiser/BuildConfig.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt b/node_modules/react-native-ble-advertiser/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt b/node_modules/react-native-ble-advertiser/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..3ef8aba
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/manifest_merge_blame_file/debug/processDebugManifest/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,20 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="com.vitorpamplona.bleavertiser" >
++4
++5    <uses-sdk android:minSdkVersion="21" />
++6
++7    <uses-permission android:name="android.permission.BLUETOOTH" />
++7-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:3:11-74
++7-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:3:28-71
++8    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
++8-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:4:11-80
++8-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:4:28-77
++9    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
++9-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:5:11-87
++9-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:5:28-84
++10    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++10-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:6:11-85
++10-->/Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:6:28-82
++11
++12</manifest>
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml b/node_modules/react-native-ble-advertiser/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+new file mode 100644
+index 0000000..7331231
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.vitorpamplona.bleavertiser" >
++
++    <uses-sdk android:minSdkVersion="21" />
++
++    <uses-permission android:name="android.permission.BLUETOOTH" />
++    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
++    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
++    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json b/node_modules/react-native-ble-advertiser/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt b/node_modules/react-native-ble-advertiser/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+new file mode 100644
+index 0000000..08f4ebe
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt
+@@ -0,0 +1 @@
++0 Warning/Error
+\ No newline at end of file
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$1.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$1.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleAdvertiseCallback.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleAdvertiseCallback.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleScanCallback.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule$SimpleScanCallback.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserModule.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserPackage.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BLEAdvertiserPackage.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BuildConfig.class b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_dir/debug/bundleLibRuntimeToDirDebug/com/vitorpamplona/bleavertiser/BuildConfig.class
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar b/node_modules/react-native-ble-advertiser/android/build/intermediates/runtime_library_classes_jar/debug/bundleLibRuntimeToJarDebug/classes.jar
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt b/node_modules/react-native-ble-advertiser/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+new file mode 100644
+index 0000000..2414660
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/intermediates/symbol_list_with_package_name/debug/generateDebugRFile/package-aware-r.txt
+@@ -0,0 +1 @@
++com.vitorpamplona.bleavertiser
+diff --git a/node_modules/react-native-ble-advertiser/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-ble-advertiser/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..7e17af1
+--- /dev/null
++++ b/node_modules/react-native-ble-advertiser/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,33 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:1:1-7:12
++INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:1:1-7:12
++	package
++		ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:2:11-51
++		INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:1:11-69
++uses-permission#android.permission.BLUETOOTH
++ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:3:11-74
++	android:name
++		ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:3:28-71
++uses-permission#android.permission.BLUETOOTH_ADMIN
++ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:4:11-80
++	android:name
++		ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:4:28-77
++uses-permission#android.permission.ACCESS_COARSE_LOCATION
++ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:5:11-87
++	android:name
++		ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:5:28-84
++uses-permission#android.permission.ACCESS_FINE_LOCATION
++ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:6:11-85
++	android:name
++		ADDED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml:6:28-82
++uses-sdk
++INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml
++INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/ncast/Works/SunStar/bPeople/app/node_modules/react-native-ble-advertiser/android/src/main/AndroidManifest.xml
+diff --git a/node_modules/react-native-ble-advertiser/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/react-native-ble-advertiser/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-ble-advertiser/android/src/main/java/com/vitorpamplona/bleadvertiser/BLEAdvertiserModule.java b/node_modules/react-native-ble-advertiser/android/src/main/java/com/vitorpamplona/bleadvertiser/BLEAdvertiserModule.java
+index 036de18..9d7d7b0 100644
+--- a/node_modules/react-native-ble-advertiser/android/src/main/java/com/vitorpamplona/bleadvertiser/BLEAdvertiserModule.java
++++ b/node_modules/react-native-ble-advertiser/android/src/main/java/com/vitorpamplona/bleadvertiser/BLEAdvertiserModule.java
+@@ -216,6 +216,7 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
+ 
+     @ReactMethod
+ 	public void scanByService(String uid, ReadableMap options, Promise promise) {
++        Log.d(TAG, "🔵 [Android Native] scanByService chamado com UUID: " + uid);
+         scan(uid, null, options, promise);
+     }
+ 
+@@ -257,13 +258,29 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
+         ScanSettings scanSettings = buildScanSettings(options);
+     
+         List<ScanFilter> filters = new ArrayList<>();
+-        if (manufacturerPayload == null)
+-            filters = null;
+-        if (manufacturerPayload != null)
++        
++        // Adicionar filtro por Manufacturer Data se fornecido
++        if (manufacturerPayload != null) {
+             filters.add(new ScanFilter.Builder().setManufacturerData(companyId, toByteArray(manufacturerPayload)).build());
+-        if (uid != null) 
++        }
++        
++        // Adicionar filtro por Service UUID se fornecido
++        if (uid != null) {
+             filters.add(new ScanFilter.Builder().setServiceUuid(ParcelUuid.fromString(uid)).build());
++        }
++        
++        // Se não há filtros, usar null para escanear todos os dispositivos
++        if (filters.isEmpty()) {
++            filters = null;
++            Log.d(TAG, "🔵 [Android Native] Sem filtros - escaneando todos os dispositivos");
++        } else {
++            Log.d(TAG, "🔵 [Android Native] Usando " + filters.size() + " filtros");
++            for (int i = 0; i < filters.size(); i++) {
++                Log.d(TAG, "🔵 [Android Native] Filtro " + i + ": " + filters.get(i).toString());
++            }
++        }
+         
++        Log.d(TAG, "🔵 [Android Native] Iniciando scan...");
+         mScanner.startScan(filters, scanSettings, mScannerCallback);
+         promise.resolve("Scanner started");
+     }
+@@ -326,15 +343,22 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
+     private class SimpleScanCallback extends ScanCallback {
+ 		@Override
+ 		public void onScanResult(int callbackType, ScanResult result) {
+-            Log.w("BLEAdvertiserModule", "Scanned: " + result.toString());
++            Log.d(TAG, "🔵 [Android Native] Dispositivo encontrado: " + result.getDevice().getAddress());
++            Log.d(TAG, "🔵 [Android Native] Nome: " + result.getScanRecord().getDeviceName());
++            Log.d(TAG, "🔵 [Android Native] RSSI: " + result.getRssi());
+ 
+             WritableMap params = Arguments.createMap();
+             WritableArray paramsUUID = Arguments.createArray();
+ 
+             if (result.getScanRecord().getServiceUuids()!=null) {
++                Log.d(TAG, "🔵 [Android Native] Service UUIDs encontrados:");
+                 for (ParcelUuid uuid : result.getScanRecord().getServiceUuids()) {
+-                    paramsUUID.pushString(uuid.toString());
++                    String uuidString = uuid.toString();
++                    paramsUUID.pushString(uuidString);
++                    Log.d(TAG, "🔵 [Android Native] - UUID: " + uuidString);
+                 }
++            } else {
++                Log.d(TAG, "🔵 [Android Native] Nenhum Service UUID encontrado");
+             }
+ 
+             params.putArray("serviceUuids", paramsUUID);
+@@ -347,6 +371,9 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
+                 if (result.getScanRecord().getManufacturerSpecificData(companyId) != null) {
+                     params.putInt("companyId", companyId);
+                     params.putArray("manufData", toByteArray(result.getScanRecord().getManufacturerSpecificData(companyId)));
++                    Log.d(TAG, "🔵 [Android Native] Manufacturer Data encontrado para companyId: " + companyId);
++                } else {
++                    Log.d(TAG, "🔵 [Android Native] Nenhum Manufacturer Data encontrado para companyId: " + companyId);
+                 }
+             }
+             
+diff --git a/node_modules/react-native-ble-advertiser/ios/BLEAdvertiser.m b/node_modules/react-native-ble-advertiser/ios/BLEAdvertiser.m
+index 38693ab..f27f180 100644
+--- a/node_modules/react-native-ble-advertiser/ios/BLEAdvertiser.m
++++ b/node_modules/react-native-ble-advertiser/ios/BLEAdvertiser.m
+@@ -32,8 +32,64 @@ RCT_EXPORT_METHOD(broadcast: (NSString *)uid payload:(NSArray *)payload options:
+     //CLBeaconRegion *beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID major:1 minor:1 identifier:REGION_ID];
+     //NSDictionary *advertisingData = [beaconRegion peripheralDataWithMeasuredPower:nil];
+     
+-    NSDictionary *advertisingData = @{
+-        CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:uid]]};
++    // Criar Manufacturer Data a partir do payload
++    NSMutableData *manufacturerData = [[NSMutableData alloc] init];
++    if (payload && [payload count] > 0) {
++        for (NSNumber *byte in payload) {
++            uint8_t byteValue = [byte unsignedCharValue];
++            [manufacturerData appendBytes:&byteValue length:1];
++        }
++    }
++    
++    // Log para debug - ver o que está sendo enviado
++    RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data criado: %@", manufacturerData);
++    RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data length: %lu", (unsigned long)[manufacturerData length]);
++    
++    // Converter para hex para debug
++    NSMutableString *hexString = [NSMutableString string];
++    const unsigned char *bytes = (const unsigned char *)[manufacturerData bytes];
++    for (NSUInteger i = 0; i < [manufacturerData length]; i++) {
++        [hexString appendFormat:@"%02x", bytes[i]];
++    }
++    RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data hex: %@", hexString);
++    
++    // Processar opções de nome do dispositivo
++    NSMutableDictionary *advertisingData = [NSMutableDictionary dictionary];
++    
++    // Sempre incluir o Service UUID
++    [advertisingData setObject:@[[CBUUID UUIDWithString:uid]] forKey:CBAdvertisementDataServiceUUIDsKey];
++    
++    // Incluir Manufacturer Data se fornecido
++    if (manufacturerData && [manufacturerData length] > 0) {
++        [advertisingData setObject:manufacturerData forKey:CBAdvertisementDataManufacturerDataKey];
++    }
++    
++    // Processar opções de nome do dispositivo
++    if (options) {
++        // Incluir nome do dispositivo se solicitado
++        if ([options objectForKey:@"includeDeviceName"] && [[options objectForKey:@"includeDeviceName"] boolValue]) {
++            NSString *localName = [options objectForKey:@"localName"];
++            if (localName && [localName length] > 0) {
++                [advertisingData setObject:localName forKey:CBAdvertisementDataLocalNameKey];
++                RCTLogInfo(@"🔵 [iOS Native] Incluindo nome local: %@", localName);
++            } else {
++                // Usar nome do dispositivo se não especificado
++                [advertisingData setObject:[[UIDevice currentDevice] name] forKey:CBAdvertisementDataLocalNameKey];
++                RCTLogInfo(@"🔵 [iOS Native] Incluindo nome do dispositivo: %@", [[UIDevice currentDevice] name]);
++            }
++        }
++        
++        // Incluir TX Power Level se solicitado
++        if ([options objectForKey:@"includeTxPowerLevel"] && [[options objectForKey:@"includeTxPowerLevel"] boolValue]) {
++            NSNumber *txPowerLevel = [options objectForKey:@"txPowerLevel"];
++            if (txPowerLevel) {
++                [advertisingData setObject:txPowerLevel forKey:CBAdvertisementDataTxPowerLevelKey];
++                RCTLogInfo(@"🔵 [iOS Native] Incluindo TX Power Level: %@", txPowerLevel);
++            }
++        }
++    }
++    
++    RCTLogInfo(@"🔵 [iOS Native] Advertising Data completo: %@", advertisingData);
+ 
+     [peripheralManager startAdvertising:advertisingData];
+ 
+@@ -152,10 +208,33 @@ RCT_EXPORT_METHOD(isActive:
+     NSObject *kCBAdvDataServiceUUIDs = [advertisementData objectForKey: @"kCBAdvDataServiceUUIDs"];
+     if ([kCBAdvDataServiceUUIDs isKindOfClass:[NSArray class]]) {
+         NSArray *uuids = (NSArray *) kCBAdvDataServiceUUIDs;
++        RCTLogInfo(@"🔵 [iOS Native] Total de Service UUIDs encontrados: %lu", (unsigned long)[uuids count]);
+         for (int j = 0; j < [uuids count]; ++j) {
+             NSObject *aValue = [uuids objectAtIndex: j];
+-            [paramsUUID addObject:[aValue description]];
++            RCTLogInfo(@"🔵 [iOS Native] Service UUID %d - Tipo: %@", j, NSStringFromClass([aValue class]));
++            RCTLogInfo(@"🔵 [iOS Native] Service UUID %d - Valor bruto: %@", j, aValue);
++            
++            // 🔥 CORREÇÃO: Sempre usar UUID completo para evitar truncamento
++            if ([aValue isKindOfClass:[CBUUID class]]) {
++                CBUUID *uuid = (CBUUID *)aValue;
++                NSString *uuidString = [uuid UUIDString];
++                
++                // 🔥 SEMPRE usar UUID completo para garantir compatibilidade
++                if ([uuidString isEqualToString:@"7777"] || [uuidString containsString:@"7777"]) {
++                    uuidString = @"00007777-0000-1000-8000-00805F9B34FB";
++                    RCTLogInfo(@"🔵 [iOS Native] Usando UUID completo: %@", uuidString);
++                }
++                
++                [paramsUUID addObject:uuidString];
++                RCTLogInfo(@"🔵 [iOS Native] Service UUID final: %@", uuidString);
++            } else {
++                NSString *description = [aValue description];
++                [paramsUUID addObject:description];
++                RCTLogInfo(@"🔵 [iOS Native] Service UUID (fallback): %@", description);
++            }
+         }
++    } else {
++        RCTLogInfo(@"🔵 [iOS Native] Nenhum Service UUID encontrado ou não é array");
+     }
+ 
+     RSSI = RSSI && RSSI.intValue < 127 ? RSSI : nil;
+@@ -166,6 +245,26 @@ RCT_EXPORT_METHOD(isActive:
+     params[@"deviceAddress"] = [peripheral identifier];
+     params[@"txPower"] = [advertisementData objectForKey: @"kCBAdvDataTxPowerLevel"];
+     
++    // 🔥 ADICIONAR: Ler Manufacturer Data (Android envia via manufData)
++    NSObject *kCBAdvDataManufacturerData = [advertisementData objectForKey: @"kCBAdvDataManufacturerData"];
++    if ([kCBAdvDataManufacturerData isKindOfClass:[NSData class]]) {
++        NSData *manufacturerData = (NSData *) kCBAdvDataManufacturerData;
++        const unsigned char *bytes = (const unsigned char *)[manufacturerData bytes];
++        NSUInteger length = [manufacturerData length];
++        
++        NSMutableArray *manufDataArray = [[NSMutableArray alloc] init];
++        // 🔥 CORREÇÃO: Pular os primeiros 2 bytes (companyId + size) para pegar apenas o deviceID
++        for (NSUInteger i = 2; i < length; i++) {
++            [manufDataArray addObject:@(bytes[i])];
++        }
++        
++        params[@"manufData"] = manufDataArray;
++        params[@"companyId"] = @(224); // EnumBle.COMPANY_ID
++        RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data encontrado: %@ bytes, deviceID: %@ bytes", @(length), @(length-2));
++    } else {
++        RCTLogInfo(@"🔵 [iOS Native] Nenhum Manufacturer Data encontrado");
++    }
++    
+     [self sendEventWithName:@"onDeviceFound" body:params];
+ }
+ 

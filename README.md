@@ -1,4 +1,10 @@
-# react-native-ble-advertiser [![npm version](https://img.shields.io/npm/v/react-native-ble-advertiser.svg?style=flat)](https://www.npmjs.com/package/react-native-ble-advertiser) [![npm downloads](https://img.shields.io/npm/dm/react-native-ble-advertiser.svg?style=flat)](https://www.npmjs.com/package/react-native-ble-advertiser) [![GitHub issues](https://img.shields.io/github/issues/vitorpamplona/react-native-ble-advertiser.svg?style=flat)](https://github.com/vitorpamplona/react-native-ble-advertiser/issues)
+# react-native-ble-bpeople
+
+Fork do react-native-ble-advertiser com correções para bPeople:
+
+- ✅ Service UUID completo no iOS (não mais truncado)
+- ✅ Manufacturer Data limpo (sem bytes extras)
+- ✅ Comunicação Android ↔ iOS funcionando 100% [![npm version](https://img.shields.io/npm/v/react-native-ble-advertiser.svg?style=flat)](https://www.npmjs.com/package/react-native-ble-advertiser) [![npm downloads](https://img.shields.io/npm/dm/react-native-ble-advertiser.svg?style=flat)](https://www.npmjs.com/package/react-native-ble-advertiser) [![GitHub issues](https://img.shields.io/github/issues/vitorpamplona/react-native-ble-advertiser.svg?style=flat)](https://github.com/vitorpamplona/react-native-ble-advertiser/issues)
 
 Bluetooth Advertiser & Scanner for React Native. This is in a very early development focused in contact tracing applications. Please use with caution.
 

@@ -216,6 +216,7 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
 	public void scanByService(String uid, ReadableMap options, Promise promise) {
+        Log.d(TAG, "🔵 [Android Native] scanByService chamado com UUID: " + uid);
         scan(uid, null, options, promise);
     }
 
@@ -257,13 +258,29 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
         ScanSettings scanSettings = buildScanSettings(options);
     
         List<ScanFilter> filters = new ArrayList<>();
-        if (manufacturerPayload == null)
-            filters = null;
-        if (manufacturerPayload != null)
-            filters.add(new ScanFilter.Builder().setManufacturerData(companyId, toByteArray(manufacturerPayload)).build());
-        if (uid != null) 
-            filters.add(new ScanFilter.Builder().setServiceUuid(ParcelUuid.fromString(uid)).build());
         
+        // Adicionar filtro por Manufacturer Data se fornecido
+        if (manufacturerPayload != null) {
+            filters.add(new ScanFilter.Builder().setManufacturerData(companyId, toByteArray(manufacturerPayload)).build());
+        }
+        
+        // Adicionar filtro por Service UUID se fornecido
+        if (uid != null) {
+            filters.add(new ScanFilter.Builder().setServiceUuid(ParcelUuid.fromString(uid)).build());
+        }
+        
+        // Se não há filtros, usar null para escanear todos os dispositivos
+        if (filters.isEmpty()) {
+            filters = null;
+            Log.d(TAG, "🔵 [Android Native] Sem filtros - escaneando todos os dispositivos");
+        } else {
+            Log.d(TAG, "🔵 [Android Native] Usando " + filters.size() + " filtros");
+            for (int i = 0; i < filters.size(); i++) {
+                Log.d(TAG, "🔵 [Android Native] Filtro " + i + ": " + filters.get(i).toString());
+            }
+        }
+        
+        Log.d(TAG, "🔵 [Android Native] Iniciando scan...");
         mScanner.startScan(filters, scanSettings, mScannerCallback);
         promise.resolve("Scanner started");
     }
@@ -326,15 +343,22 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
     private class SimpleScanCallback extends ScanCallback {
 		@Override
 		public void onScanResult(int callbackType, ScanResult result) {
-            Log.w("BLEAdvertiserModule", "Scanned: " + result.toString());
+            Log.d(TAG, "🔵 [Android Native] Dispositivo encontrado: " + result.getDevice().getAddress());
+            Log.d(TAG, "🔵 [Android Native] Nome: " + result.getScanRecord().getDeviceName());
+            Log.d(TAG, "🔵 [Android Native] RSSI: " + result.getRssi());
 
             WritableMap params = Arguments.createMap();
             WritableArray paramsUUID = Arguments.createArray();
 
             if (result.getScanRecord().getServiceUuids()!=null) {
+                Log.d(TAG, "🔵 [Android Native] Service UUIDs encontrados:");
                 for (ParcelUuid uuid : result.getScanRecord().getServiceUuids()) {
-                    paramsUUID.pushString(uuid.toString());
+                    String uuidString = uuid.toString();
+                    paramsUUID.pushString(uuidString);
+                    Log.d(TAG, "🔵 [Android Native] - UUID: " + uuidString);
                 }
+            } else {
+                Log.d(TAG, "🔵 [Android Native] Nenhum Service UUID encontrado");
             }
 
             params.putArray("serviceUuids", paramsUUID);
@@ -347,6 +371,9 @@ public class BLEAdvertiserModule extends ReactContextBaseJavaModule {
                 if (result.getScanRecord().getManufacturerSpecificData(companyId) != null) {
                     params.putInt("companyId", companyId);
                     params.putArray("manufData", toByteArray(result.getScanRecord().getManufacturerSpecificData(companyId)));
+                    Log.d(TAG, "🔵 [Android Native] Manufacturer Data encontrado para companyId: " + companyId);
+                } else {
+                    Log.d(TAG, "🔵 [Android Native] Nenhum Manufacturer Data encontrado para companyId: " + companyId);
                 }
             }
             

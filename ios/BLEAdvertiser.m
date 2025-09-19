@@ -32,8 +32,64 @@ RCT_EXPORT_METHOD(broadcast: (NSString *)uid payload:(NSArray *)payload options:
     //CLBeaconRegion *beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID major:1 minor:1 identifier:REGION_ID];
     //NSDictionary *advertisingData = [beaconRegion peripheralDataWithMeasuredPower:nil];
     
-    NSDictionary *advertisingData = @{
-        CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:uid]]};
+    // Criar Manufacturer Data a partir do payload
+    NSMutableData *manufacturerData = [[NSMutableData alloc] init];
+    if (payload && [payload count] > 0) {
+        for (NSNumber *byte in payload) {
+            uint8_t byteValue = [byte unsignedCharValue];
+            [manufacturerData appendBytes:&byteValue length:1];
+        }
+    }
+    
+    // Log para debug - ver o que está sendo enviado
+    RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data criado: %@", manufacturerData);
+    RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data length: %lu", (unsigned long)[manufacturerData length]);
+    
+    // Converter para hex para debug
+    NSMutableString *hexString = [NSMutableString string];
+    const unsigned char *bytes = (const unsigned char *)[manufacturerData bytes];
+    for (NSUInteger i = 0; i < [manufacturerData length]; i++) {
+        [hexString appendFormat:@"%02x", bytes[i]];
+    }
+    RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data hex: %@", hexString);
+    
+    // Processar opções de nome do dispositivo
+    NSMutableDictionary *advertisingData = [NSMutableDictionary dictionary];
+    
+    // Sempre incluir o Service UUID
+    [advertisingData setObject:@[[CBUUID UUIDWithString:uid]] forKey:CBAdvertisementDataServiceUUIDsKey];
+    
+    // Incluir Manufacturer Data se fornecido
+    if (manufacturerData && [manufacturerData length] > 0) {
+        [advertisingData setObject:manufacturerData forKey:CBAdvertisementDataManufacturerDataKey];
+    }
+    
+    // Processar opções de nome do dispositivo
+    if (options) {
+        // Incluir nome do dispositivo se solicitado
+        if ([options objectForKey:@"includeDeviceName"] && [[options objectForKey:@"includeDeviceName"] boolValue]) {
+            NSString *localName = [options objectForKey:@"localName"];
+            if (localName && [localName length] > 0) {
+                [advertisingData setObject:localName forKey:CBAdvertisementDataLocalNameKey];
+                RCTLogInfo(@"🔵 [iOS Native] Incluindo nome local: %@", localName);
+            } else {
+                // Usar nome do dispositivo se não especificado
+                [advertisingData setObject:[[UIDevice currentDevice] name] forKey:CBAdvertisementDataLocalNameKey];
+                RCTLogInfo(@"🔵 [iOS Native] Incluindo nome do dispositivo: %@", [[UIDevice currentDevice] name]);
+            }
+        }
+        
+        // Incluir TX Power Level se solicitado
+        if ([options objectForKey:@"includeTxPowerLevel"] && [[options objectForKey:@"includeTxPowerLevel"] boolValue]) {
+            NSNumber *txPowerLevel = [options objectForKey:@"txPowerLevel"];
+            if (txPowerLevel) {
+                [advertisingData setObject:txPowerLevel forKey:CBAdvertisementDataTxPowerLevelKey];
+                RCTLogInfo(@"🔵 [iOS Native] Incluindo TX Power Level: %@", txPowerLevel);
+            }
+        }
+    }
+    
+    RCTLogInfo(@"🔵 [iOS Native] Advertising Data completo: %@", advertisingData);
 
     [peripheralManager startAdvertising:advertisingData];
 
@@ -152,10 +208,33 @@ RCT_EXPORT_METHOD(isActive:
     NSObject *kCBAdvDataServiceUUIDs = [advertisementData objectForKey: @"kCBAdvDataServiceUUIDs"];
     if ([kCBAdvDataServiceUUIDs isKindOfClass:[NSArray class]]) {
         NSArray *uuids = (NSArray *) kCBAdvDataServiceUUIDs;
+        RCTLogInfo(@"🔵 [iOS Native] Total de Service UUIDs encontrados: %lu", (unsigned long)[uuids count]);
         for (int j = 0; j < [uuids count]; ++j) {
             NSObject *aValue = [uuids objectAtIndex: j];
-            [paramsUUID addObject:[aValue description]];
+            RCTLogInfo(@"🔵 [iOS Native] Service UUID %d - Tipo: %@", j, NSStringFromClass([aValue class]));
+            RCTLogInfo(@"🔵 [iOS Native] Service UUID %d - Valor bruto: %@", j, aValue);
+            
+            // 🔥 CORREÇÃO: Sempre usar UUID completo para evitar truncamento
+            if ([aValue isKindOfClass:[CBUUID class]]) {
+                CBUUID *uuid = (CBUUID *)aValue;
+                NSString *uuidString = [uuid UUIDString];
+                
+                // 🔥 SEMPRE usar UUID completo para garantir compatibilidade
+                if ([uuidString isEqualToString:@"7777"] || [uuidString containsString:@"7777"]) {
+                    uuidString = @"00007777-0000-1000-8000-00805F9B34FB";
+                    RCTLogInfo(@"🔵 [iOS Native] Usando UUID completo: %@", uuidString);
+                }
+                
+                [paramsUUID addObject:uuidString];
+                RCTLogInfo(@"🔵 [iOS Native] Service UUID final: %@", uuidString);
+            } else {
+                NSString *description = [aValue description];
+                [paramsUUID addObject:description];
+                RCTLogInfo(@"🔵 [iOS Native] Service UUID (fallback): %@", description);
+            }
         }
+    } else {
+        RCTLogInfo(@"🔵 [iOS Native] Nenhum Service UUID encontrado ou não é array");
     }
 
     RSSI = RSSI && RSSI.intValue < 127 ? RSSI : nil;
@@ -165,6 +244,26 @@ RCT_EXPORT_METHOD(isActive:
     params[@"deviceName"] = [peripheral name];
     params[@"deviceAddress"] = [peripheral identifier];
     params[@"txPower"] = [advertisementData objectForKey: @"kCBAdvDataTxPowerLevel"];
+    
+    // 🔥 ADICIONAR: Ler Manufacturer Data (Android envia via manufData)
+    NSObject *kCBAdvDataManufacturerData = [advertisementData objectForKey: @"kCBAdvDataManufacturerData"];
+    if ([kCBAdvDataManufacturerData isKindOfClass:[NSData class]]) {
+        NSData *manufacturerData = (NSData *) kCBAdvDataManufacturerData;
+        const unsigned char *bytes = (const unsigned char *)[manufacturerData bytes];
+        NSUInteger length = [manufacturerData length];
+        
+        NSMutableArray *manufDataArray = [[NSMutableArray alloc] init];
+        // 🔥 CORREÇÃO: Pular os primeiros 2 bytes (companyId + size) para pegar apenas o deviceID
+        for (NSUInteger i = 2; i < length; i++) {
+            [manufDataArray addObject:@(bytes[i])];
+        }
+        
+        params[@"manufData"] = manufDataArray;
+        params[@"companyId"] = @(224); // EnumBle.COMPANY_ID
+        RCTLogInfo(@"🔵 [iOS Native] Manufacturer Data encontrado: %@ bytes, deviceID: %@ bytes", @(length), @(length-2));
+    } else {
+        RCTLogInfo(@"🔵 [iOS Native] Nenhum Manufacturer Data encontrado");
+    }
     
     [self sendEventWithName:@"onDeviceFound" body:params];
 }
